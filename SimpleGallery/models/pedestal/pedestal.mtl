@@ -1,0 +1,13 @@
+# Blender MTL File: 'simplegallery.blend'
+# Material Count: 1
+
+newmtl OakDarkGrain_1
+Ns 94.117647
+Ka 0.000000 0.000000 0.000000
+Kd 0.278431 0.141176 0.086275
+Ks 0.330000 0.330000 0.330000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd pedestal\OakDarkGrain_1.jpg

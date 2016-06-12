@@ -1,0 +1,22 @@
+# Blender MTL File: 'simplegallery.blend'
+# Material Count: 2
+
+newmtl pasted__bancoMadeiraSG
+Ns 94.117647
+Ka 0.330000 0.040000 0.020000
+Kd 0.029068 0.660000 0.351198
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 0.000000
+illum 6
+
+newmtl pasted__bancoPernasSG
+Ns 94.117647
+Ka 0.166667 0.166667 0.166667
+Kd 0.868886 0.151090 0.039160
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2

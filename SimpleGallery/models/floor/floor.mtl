@@ -1,0 +1,13 @@
+# Blender MTL File: 'simplegallery.blend'
+# Material Count: 1
+
+newmtl Floor
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.058704 0.063261 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.500000
+illum 1
+map_Kd floor\blue-carpet-fabric-texture-image-2-1604-2.png

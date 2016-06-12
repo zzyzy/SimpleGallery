@@ -1,0 +1,33 @@
+# Blender MTL File: 'simplegallery.blend'
+# Material Count: 3
+
+newmtl Metal_Corrogated_Shiny
+Ns 94.117647
+Ka 0.000000 0.000000 0.000000
+Kd 0.752941 0.752941 0.752941
+Ks 0.330000 0.330000 0.330000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd table\Metal_Corrogated_Shiny.jpg
+
+newmtl Translucent_Glass_Blue
+Ns 94.117647
+Ka 0.000000 0.000000 0.000000
+Kd 0.392157 0.584314 0.929412
+Ks 0.330000 0.330000 0.330000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.500000
+illum 2
+
+newmtl Wood_Bamboo_Medium
+Ns 94.117647
+Ka 0.000000 0.000000 0.000000
+Kd 0.690196 0.407843 0.164706
+Ks 0.330000 0.330000 0.330000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
