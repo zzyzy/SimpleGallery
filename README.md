@@ -1,17 +1,14 @@
-SimpleGallery
---------------------------------------------------------------------------------
+# SimpleGallery
 
-Author: Zhen Zhi Lee (zzyzy)
-Contact: leezhenzhi@gmail.com
-
+## Overview
 A simple gallery made to be more familiar with OpenGL and GLSL.
-This is the continuation of the SimpleScene project.
+This is the continuation of the SimpleScene (https://github.com/zzyzy/SimpleScene) project.
 
 To begin, open the solution file (.sln) with Visual Studio 2013+ and build it.
 All the third party libraries required are packaged together for convenience.
 
-Or, a prebuilt binary is available in either Debug/ or Release/, just execute
-it to see the gallery.
+~~Or, a prebuilt binary is available in either Debug/ or Release/, just execute
+it to see the gallery.~~
 
 Most of the images and models have been modified for my own purposes using
 Photoshop and Blender. See the disclaimer below for more information regarding
@@ -25,16 +22,14 @@ refer to the known issues section for more info.
 
 Make sure C++11 is supported.
 
-Libraries used are:
---------------------------------------------------------------------------------
-deVIL for image loading
-assimp for model loading
-glm for vector and matrix maths
-glew for OpenGL 3.3 extensions
-freeglut for windowing
+## Libraries used are
+- deVIL for image loading
+- assimp for model loading
+- glm for vector and matrix maths
+- glew for OpenGL 3.3 extensions
+- freeglut for windowing
 
-Features:
---------------------------------------------------------------------------------
+## Features
 01. An art gallery with 9 rooms
 02. The middle room is the room with screenshot portraits (loaded from the
     screenshots/* folder)
@@ -53,53 +48,57 @@ Features:
     turns on the sun and sets the background to white
 12. Help display is available by pressing the 'h' key
 13. User interactions include:
-      Wireframe mode with a
-        'z' - Black blackground with white lines
-        'x' - White background with black lines
-        'c' - Blue background with yellow lines
-      Solid mode that are
-        'v' - Colored using basic colors without lighting and textures
-        'b' - Colored with material and lighting
-        'n' - Textured only without lighting
-        'm' - Basic phong shading along with texture
-      Point light controls are
-        '1' - Toggle light for room 1
-        '2' - Toggle light for room 2
-        '3' - Toggle light for room 3
-        '4' - Toggle light for room 4
-        '5' - Toggle light for room 5
-        '6' - Toggle light for room 6
-        '7' - Toggle light for room 7
-        '8' - Toggle light for room 8
-        '9' - Toggle light for room 9
-      Spot light controls are
-        ';' - Toggle spot light 1
-        ''' - Toggle spot light 2
-      Flash light controls are
-        'f' - Toggle flash light
-        'j' - Increase intensity
-        'k' - Decrease intensity
-        'l' - Cycle through R, G or B colors
-      Other controls are
-        't' - Toggle blending
-        'i' - Toggle day/night time
-        'o' - Toggle full scene multisample anti aliasing
-        'p' - Take a screenshot (they are saved in the screenshots/ folder)
-        'h' - Toggle help instructions
-        ESC - Quit
+
+        Wireframe mode with a
+            Z           - Black blackground with white lines
+            X           - White background with black lines
+            C           - Blue background with yellow lines
+        Solid mode that are
+            V           - Colored using basic colors without lighting and textures
+            B           - Colored with material and lighting
+            N           - Textured only without lighting
+            M           - Basic phong shading along with texture
+        Point light controls are
+            1           - Toggle light for room 1
+            2           - Toggle light for room 2
+            3           - Toggle light for room 3
+            4           - Toggle light for room 4
+            5           - Toggle light for room 5
+            6           - Toggle light for room 6
+            7           - Toggle light for room 7
+            8           - Toggle light for room 8
+            9           - Toggle light for room 9
+        Spot light controls are
+            ;           - Toggle spot light 1
+            '           - Toggle spot light 2
+        Flash light controls are
+            F           - Toggle flash light
+            J           - Increase intensity
+            K           - Decrease intensity
+            L           - Cycle through R, G or B colors
+        Other controls are
+            T           - Toggle blending
+            I           - Toggle day/night time
+            O           - Toggle full scene multisample anti aliasing
+            P           - Take a screenshot (they are saved in the screenshots/ folder)
+            H           - Toggle help instructions
+            ESC         - Quit
+        
 14. Camera controls are also available and they are:
-      'w', 'a', 's', 'd' for the usual FPS control
-      'q' - roll left
-      'e' - roll right
-      PAGE UP - move up
-      PAGE DOWN - move down
-      HOME - Zoom in
-      END - Zoom out
-      Arrow UP - Look up
-      Arrow DOWN - Look down
-      Arrow LEFT - Look to the left
-      Arrow RIGHT - Look to the right
-      '0' - Reset the camera to the starting point
+
+        W, A, S, D for the usual FPS control
+        Q               - Roll left
+        E               - Roll right
+        PAGE UP         - Move up
+        PAGE DOWN       - Move down
+        HOME            - Zoom in
+        END             - Zoom out
+        Arrow UP        - Look up
+        Arrow DOWN      - Look down
+        Arrow LEFT      - Look to the left
+        Arrow RIGHT     - Look to the right
+        0               - Reset the camera to the starting point
+        
 15. Screenshots can be taken and they are showin in the middle room of the
     gallery
 16. The gallery's floor is reflective, turn on blending to try it
@@ -108,13 +107,14 @@ Features:
 
 It is highly recommended to disable the help instruction to improve the fps.
 
-Known issues:
---------------------------------------------------------------------------------
+##Known issues
 01. Model loading during initialization slow
-      This is mainly due to how the application generates the buffers for the
-      models. Each mesh in a model uses an individual buffer instead of using
-      the same vertex array buffer and apply transformation to every instances
-      on the gallery. This is a huge waste of memory and loading time.
+
+        This is mainly due to how the application generates the buffers for the
+        models. Each mesh in a model uses an individual buffer instead of using
+        the same vertex array buffer and apply transformation to every instances
+        on the gallery. This is a huge waste of memory and loading time.
+        
 02. During night time with blending on, the floor may be missing, not sure if
     this is correct because of the floor's blending with the background of the
     scene.
@@ -125,8 +125,7 @@ Known issues:
 04. Motion blur has yet to be implemented (OpenGL 3.3 core profile removed
     the accumulation buffer)
 
-TODO:
---------------------------------------------------------------------------------
+## TODO
 01. Implement freetype to render text instead of using the compatibility profile
 02. Be OpenGL 3.3 core profile compliant
 03. Further optimization with model loading is required
@@ -136,8 +135,7 @@ TODO:
 07. Use GLFW/SFML instead of GLUT
 08. Directory path to models uses a hacky way, this must be changed
 
-Lessons learnt:
---------------------------------------------------------------------------------
+## Lessons learnt
 01. In GLSL, light with alpha value makes transparent object opaque because of
     scalar vector multiplication (see shaders/full.frag)
 02. In Blender, UV mapped texture will be stretched if the object is scaled.
@@ -148,8 +146,7 @@ Lessons learnt:
     and etc.
 04. How to reflect objects using the stencil buffer
 
-Disclaimer:
---------------------------------------------------------------------------------
+## Disclaimer
 All the images used for textures and the models in the scene are taken via
 Google Images and 3dwarehouse of SketchUp. I do not own them and credits belong
 to all the respective authors. This project is open source and for learning
